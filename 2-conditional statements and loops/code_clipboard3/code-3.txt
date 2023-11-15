@@ -1,0 +1,13 @@
+package main
+import ("fmt")
+func main() {
+  number := 7
+  if number <= 9 {
+    fmt.Println(number, "is less than 9.")
+    if number < 11 {
+      fmt.Println(number, "is also less than 11.")
+     }
+  } else {
+    fmt.Println(number, "is greater than 9 and 11.")
+  }
+}

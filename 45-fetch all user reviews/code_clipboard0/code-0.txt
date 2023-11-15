@@ -1,0 +1,3 @@
+curl -s --location --request GET 'https://ed-4793220156096512.educative.run/reviews/user_reviews/'$reviewer_id \
+--header "token: $token1" \
+--data-raw ''

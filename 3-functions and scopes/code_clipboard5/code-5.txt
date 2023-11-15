@@ -1,0 +1,43 @@
+package main
+import ("fmt")
+
+//Single parameter
+func animal(name string) {
+  fmt.Println("A", name, "is an animal")
+}
+
+//Testing multiple parameters
+func animals(name, may string) {
+  fmt.Println("A", name, "is an animal and ", may, "fly" )
+}
+
+
+func sum(length int, breadth int) int {
+  return length + breadth
+}
+
+func multiply(base int, height int) int {
+  area1 := base + height
+  return area1
+}
+
+func triangle(side1 int, side2 int, base int, height int) (area int, perimeter int) {
+	perimeter = side1 + side2 + base
+	area = base * height
+	return 
+}
+
+func main() {
+  animal("dog")
+  animal("fish")
+  animal("donkey")
+  animals("dog", "cannot")
+  animals("bird", "can")
+  animals("donkey", "cannot")
+  fmt.Println(sum(3, 7))
+  fmt.Println(multiply(4, 2))
+  	var area, perimeter int
+	area, perimeter = triangle(3, 3, 7, 9)
+	fmt.Println("Area:", area)
+	fmt.Println("Perimeter:", perimeter)
+}

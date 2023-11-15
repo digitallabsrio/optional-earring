@@ -1,0 +1,40 @@
+#!/bin/bash.
+clear
+mongod > /dev/null 2>&1 &
+sleep 5
+
+go run main.go &
+#   > /dev/null 2>&1
+printf "\nServer starting...\n"
+
+curl 'https://ed-4793220156096512.educative.run/api' &> log.txt
+
+while :
+do
+   if grep "Your app refused to connect." < log.txt > waste.txt; then
+	   i=1
+      curl 'https://ed-4793220156096512.educative.run/api' &> log.txt
+   else
+	   break
+   fi
+
+done
+#printf "\nServer Started\n"
+
+
+printf "\nSending User Registartion Request\n"
+
+
+curl -s --location --request POST 'https://ed-4793220156096512.educative.run/users/signup' \
+ --data-raw '{
+    "ID":5,
+ "Name":"test", 
+ "Email":"test@gmail.com", 
+ "Password":"test001",
+ "Age":25
+ }' | jq
+
+
+
+
+

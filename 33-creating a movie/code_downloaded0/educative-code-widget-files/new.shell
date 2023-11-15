@@ -1,0 +1,69 @@
+#!/bin/bash.
+clear
+mongod > /dev/null 2>&1 &
+sleep 5
+go run main.go  > /dev/null 2>&1 &
+printf "\nServer starting...\n"
+
+curl -s --location --request POST 'https://ed-4793220156096512.educative.run/movies/createmovie' \
+--header "token: " \
+ --data-raw ''  &> log.txt
+
+while :
+do
+   if grep "Your app refused to connect." < log.txt > waste.txt; then
+	   i=1
+curl -s --location --request POST 'https://ed-4793220156096512.educative.run/movies/createmovie' \
+--header "token: " \
+ --data-raw ''  &> log.txt
+   else
+	break
+   fi
+
+done
+
+
+printf "\nSending Login RequestRequest\n"
+
+printf "\ncurl -s --location --request POST https://ed-4793220156096512.educative.run/users/login \
+ --data-raw '{
+ Email:{{email}}, 
+ Password:{{password}}
+ }\n"
+
+value=$(curl -s --location --request POST 'https://ed-4793220156096512.educative.run/users/login' \
+ --data-raw '{
+ "Email":"{{email}}", 
+ "Password":"{{password}}"
+ }') &> waste.txt
+
+
+token=$(echo "$value" | jq '.token')
+
+token1=$(echo "$token" | sed -e 's/^"//' -e 's/"$//')
+
+
+
+printf "\nSending Create a MovieRequest\n"
+
+printf "\ncurl -s --location --request POST https://ed-4793220156096512.educative.run/movies/createmovie \
+--header token: $token1 \
+ --data-raw {
+	Name:{{movieName}},
+	Topic:{{topic}},
+	genre_id:{{genre_id}},
+	Movie_URL:{{movie_url}},
+	movie_id:{{movie_id}}
+ }\n"
+
+curl -s --location --request POST 'https://ed-4793220156096512.educative.run/movies/createmovie' \
+--header "token: $token1" \
+ --data-raw '{
+	"Name":"{{movieName}}",
+	"Topic":"{{topic}}",
+	"genre_id":{{genre_id}},
+	"Movie_URL":"{{movie_url}}",
+	"movie_id":{{movie_id}}
+ }' | jq
+
+

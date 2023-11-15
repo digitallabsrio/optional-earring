@@ -1,0 +1,8 @@
+package main
+import ("fmt")
+
+func main() {
+  const ICECREAM = 1
+  ICECREAM = 3
+  fmt.Println(ICECREAM)
+}

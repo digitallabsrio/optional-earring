@@ -1,0 +1,7 @@
+curl -s --location --request POST 'https://ed-4793220156096512.educative.run/users/signup' \
+ --data-raw '{
+ "Username":"{{user_name}}", 
+ "Email":"{{user_email}}", 
+ "Password":"{{user_password}}",
+ "User_type":"{{user_type}}"
+ }' 

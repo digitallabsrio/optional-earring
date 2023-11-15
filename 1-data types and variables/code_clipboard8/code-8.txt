@@ -1,0 +1,24 @@
+package main
+import ("fmt")
+func main() {
+
+  crackers:= 9 
+  chips:= 3
+
+  //Addition
+  fmt.Println("We have", crackers+chips, " crackers and chips all together.")
+  //Subtraction
+ fmt.Println("We have", crackers-chips, " crackers and chips all together.")
+  //Multiplies
+ fmt.Println("We have", crackers*chips, " crackers and chips all together.")
+  //Divison
+ fmt.Println("We have", crackers/chips, " crackers and chips all together.")
+  //Modulus 
+ fmt.Println("We have", crackers%chips, " crackers and chips all together.")
+  //Increment
+  crackers++
+ fmt.Println("We have", crackers, "crackers")
+  //Decrement 
+  chips--
+ fmt.Println("We have", chips, "chips")
+}

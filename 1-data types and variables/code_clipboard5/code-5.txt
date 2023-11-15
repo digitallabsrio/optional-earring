@@ -1,0 +1,16 @@
+package main
+import (
+"fmt";
+"reflect";
+)
+
+func main() {
+  var cents, books, movie = 7.9, 4, "Star wars"
+
+  fmt.Println("Tom's change is ",cents, "cents.")
+  fmt.Println("cents is of type", reflect.TypeOf(cents))
+  fmt.Println("We bought a total of ", books, "books.")
+  fmt.Println("books is of type", reflect.TypeOf(books))
+  fmt.Println("My favourite movie is", movie, ".")
+  fmt.Println("movie is of type", reflect.TypeOf(movie))
+}

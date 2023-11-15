@@ -1,0 +1,17 @@
+package main
+import ("fmt")
+
+func main() {
+  //Single condition loop
+   fmt.Println("Single condition loop")
+   i := 0
+    for i <= 8 {
+      fmt.Println(i)
+        i = i + 1
+    }
+  //Classic loop structure
+  fmt.Println("Classic loop structure with 3 statements")
+  for i:=0; i < 7; i++ {
+    fmt.Println(i)
+  }
+}

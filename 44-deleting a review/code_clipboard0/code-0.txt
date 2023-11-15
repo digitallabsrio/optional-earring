@@ -1,0 +1,3 @@
+curl -s --location --request DELETE "https://ed-4793220156096512.educative.run/reviews/{{review_id}}" \
+--header "token: $token1" \
+ --data-raw ''

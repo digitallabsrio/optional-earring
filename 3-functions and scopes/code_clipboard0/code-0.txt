@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func main() {
+   // local variable
+   var eggs,chickens int 
+   eggs = 3
+   chickens = 7
+
+   fmt.Printf ("eggs = %d, chickens = %d\n", eggs,chickens)
+}

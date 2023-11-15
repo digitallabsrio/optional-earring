@@ -1,0 +1,36 @@
+package main
+import ("fmt")
+
+type Club struct {
+  name string
+  position int
+  league string
+  country string
+}
+
+func main() {
+  var club1 Club
+
+  // club1 specification
+  club1.name = "Real Madrid"
+  club1.position = 1
+  club1.league= "La Liga"
+  club1.country = "Spain"
+
+  // Access and print club1 info
+  fmt.Println("Name: ", club1.name)
+  fmt.Println("Table Position: ", club1.position)
+  fmt.Println("League: ", club1.league)
+  fmt.Println("Country: ", club1.country)
+
+  //Print by calling a function
+  fmt.Println("Print by calling a function")
+   printClub(club1)
+}
+
+func printClub(clubs Club) {
+  fmt.Println("Name: ", clubs.name)
+  fmt.Println("Table Position: ", clubs.position)
+  fmt.Println("League: ", clubs.league)
+  fmt.Println("Country: ", clubs.country)
+}

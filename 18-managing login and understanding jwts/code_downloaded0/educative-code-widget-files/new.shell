@@ -1,0 +1,43 @@
+#!/bin/bash.
+clear
+mongod > /dev/null 2>&1 &
+sleep 5
+go run main.go  > /dev/null 2>&1 &
+ 
+printf "\nServer starting...\n"
+
+curl -s --location --request POST 'https://ed-4793220156096512.educative.run/users/login' \
+ --data-raw '{
+ "Email":"{{Email}}", 
+ "Password":"{{Password}}"
+ }'  &> log.txt
+
+while :
+do
+   if grep "Your app refused to connect." < log.txt > waste.txt; then
+	   i=1
+curl -s --location --request POST 'https://ed-4793220156096512.educative.run/users/login' \
+ --data-raw '{
+ "Email":"{{Email}}", 
+ "Password":"{{Password}}"
+ }'  &> log.txt
+   else
+	break
+   fi
+
+done
+
+printf "\nSending Login Request\n"
+
+printf "curl -s --location --request POST https://ed-4793220156096512.educative.run/users/login \
+ --data-raw {
+ Email:{{email}}, 
+ Password:{{password}}
+ }\n\n\n"
+ 
+curl -s --location --request POST 'https://ed-4793220156096512.educative.run/users/login' \
+ --data-raw '{
+ "Email":"{{Email}}", 
+ "Password":"{{Password}}"
+ }' | jq
+

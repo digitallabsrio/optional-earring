@@ -1,0 +1,22 @@
+package main
+import ("fmt")
+
+func main() {
+  //continue statement
+   for i:=0; i < 7; i++ {
+    if i == 3 {
+      continue
+    }
+   fmt.Println(i)
+  }
+
+
+  fmt.Println("This is to test the break statement")
+  for i:=0; i < 7; i++ {
+    if i == 3 {
+      break
+    }
+   fmt.Println(i)
+
+  }
+}

@@ -1,0 +1,14 @@
+package main
+import ("fmt")
+
+func main() {
+
+  Username := "Greghu"
+  if Username == "Lizzy" {
+    fmt.Println("Elizabeth's username is Lizzy")
+  } else if Username == "Greghu"  {
+    fmt.Println("Greg's username is", Username)
+  } else {
+    fmt.Println("Ooops, please sign up!")
+  }
+}

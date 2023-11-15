@@ -1,0 +1,24 @@
+package main
+import ("fmt")
+
+func main() {
+  //Simple assignment operator
+  var favNumber = 9
+  fmt.Println("My favourite number is ", favNumber)
+  //Addition assignment operator
+  var sisters = 9
+  sisters +=3
+  fmt.Println("I have ", sisters, "sisters")
+  //Subtraction assignment operator
+  var candy = 9
+  candy -= 3
+  fmt.Println(candy, "candies is too much")
+  //Multiply and assign 
+  var dogs = 9
+  dogs *= 3
+  fmt.Println("We have", dogs, "dogs")
+  //Divide and assign
+  var eggs = 9
+  eggs /= 3
+  fmt.Println("I have ", eggs, "eggs")
+}

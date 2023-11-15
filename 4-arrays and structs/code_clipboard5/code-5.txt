@@ -1,0 +1,14 @@
+package main
+import "fmt"
+
+func main() {
+var trial [2][3]int
+    for i := 0; i < 2; i++ {
+        for j := 0; j < 3; j++ {
+            trial[i][j] = i + j
+                //To acess the conent of the array
+            fmt.Printf("trial[%d][%d] = %d\n", i,j, trial[i][j] )
+        }
+    }
+    fmt.Println("2d dimensional array: ", trial)
+}

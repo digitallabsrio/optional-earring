@@ -1,0 +1,14 @@
+package main
+import ("fmt")
+
+func main() {
+  countries := [...]string{"Nigeria", "Netherlands", "Norway","Rwanda"}
+  fmt.Println("Printing the values at different indexes")
+  fmt.Println(countries[0])
+  fmt.Println(countries[1])
+  fmt.Println(countries[2])
+  fmt.Println(countries[3])
+  fmt.Println("Updating the value of the element at index 3")
+  countries[3] = "Spain"
+  fmt.Println(countries[3])
+}

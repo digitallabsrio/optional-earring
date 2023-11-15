@@ -1,0 +1,30 @@
+package main
+import (
+    "fmt"
+)
+func main() {
+    age := 13
+    fmt.Print("Dan is ",age,". This means he is a ")
+    //Single case statements
+    switch age {
+    case 1:
+        fmt.Println("toddler")
+    case 13:
+        fmt.Println("teenager")
+    case 18:
+        fmt.Println("adult")
+    }
+
+    //Multiple case statements
+      animal := "dog"
+      fmt.Print("A ", animal, " is a " )
+   switch animal {
+        case "dog", "cat", "frog":
+            fmt.Println("pet animal")
+        case "lion", "tiger", "elephant":
+                fmt.Println("zoo animal")
+    default:
+    fmt.Println("Ooops, we don't know this animal")
+    }
+
+}

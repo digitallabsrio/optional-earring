@@ -1,0 +1,36 @@
+package main
+
+import (
+	"fmt"
+	"reflect"
+)
+
+
+func main() {
+	sports := [...]string{"football", "basketball", "hockey"}
+
+	fmt.Println("Looping through the array")
+	for i := 0; i < len(sports); i++ {
+		fmt.Println(sports[i])
+	}
+
+	fmt.Println("The sport football exist? (true or false)")
+	//Searching for a particular item
+	fmt.Println(itemExists(sports, "football"))
+}
+	
+	func itemExists(arrayType interface{}, item interface{}) bool {
+	arr := reflect.ValueOf(arrayType)
+
+	if arr.Kind() != reflect.Array {
+		panic("Invalid datatype")
+	}
+
+	for i := 0; i < arr.Len(); i++ {
+		if arr.Index(i).Interface() == item {
+			return true
+		}
+	}
+
+	return false
+	}

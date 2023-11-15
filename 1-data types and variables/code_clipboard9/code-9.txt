@@ -1,0 +1,20 @@
+package main
+import ("fmt")
+func main() {
+
+  noodles := 9
+  cookies := 3
+
+  //Equal to
+  fmt.Println(noodles==cookies) 
+  //Not Equal to
+  fmt.Println(noodles!=cookies) 
+  //Greater than 
+  fmt.Println(noodles>cookies) 
+  //Less than
+  fmt.Println(noodles<cookies) 
+  //Greater than or equal to
+  fmt.Println(noodles>=cookies) 
+  //Less than or equal to
+  fmt.Println(noodles<=cookies) 
+}

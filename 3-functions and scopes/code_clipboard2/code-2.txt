@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+ 
+// global variable
+var months int = 11
+ 
+func main() {
+   //local variable
+   var months int = 9
+   fmt.Printf ("months = %d\n",  months)
+}

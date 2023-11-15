@@ -1,0 +1,10 @@
+package main
+import ("fmt")
+
+func main() {
+  var nums = [3]int{1,3,7} //defined length
+  countries := [...]string{"Nigeria", "Netherlands", "Norway"} //inferred length
+
+  fmt.Println(nums)
+  fmt.Println(countries)
+}

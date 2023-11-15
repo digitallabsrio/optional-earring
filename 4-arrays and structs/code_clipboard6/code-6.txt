@@ -1,0 +1,34 @@
+package main
+import ("fmt")
+
+func main() {
+  emptySlice := []int{} 
+  fmt.Println(len(emptySlice)) 
+  fmt.Println(cap(emptySlice)) 
+  fmt.Println(emptySlice) 
+
+  food := []string{"Bread", "Rice", "Potatoes", "Spaghetti"}
+  fmt.Println(len(food))
+  fmt.Println(cap(food))
+  fmt.Println(food)
+
+  //Creating from an array
+  myArray := [8]int{1,3,7,9,11,13,17,19}
+  sliceD := myArray[3:8]
+
+  fmt.Printf("sliceD = %v\n", sliceD)
+  fmt.Printf("Length of sliceD = %d\n", len(sliceD))
+  fmt.Printf("Capacity of sliceD = %d\n", cap(sliceD))
+
+
+  sliceX := make([]int, 3, 7)
+  fmt.Printf("sliceX = %v\n", sliceX)
+  fmt.Printf("Length of sliceX= %d\n", len(sliceX))
+  fmt.Printf("Capacity of sliceX = %d\n", cap(sliceX))
+
+
+  sliceY := make([]int, 3)
+  fmt.Printf("sliceY = %v\n", sliceY)
+  fmt.Printf("Length of sliceY= %d\n", len(sliceY))
+  fmt.Printf("Capacity of sliceY = %d\n", cap(sliceY))
+}

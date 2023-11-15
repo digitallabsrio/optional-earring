@@ -1,0 +1,12 @@
+package main
+import ("fmt")
+func main() {
+
+  var buses = 3
+   //Logical and - returns true if both statements are true, and false otherwise.
+ fmt.Println(buses < 3 &&  buses < 9)
+  //Logical or - returns false if both statements are false, and true otherwise.
+ fmt.Println(buses < 3 ||  buses < 9)
+  //Logical not - returns true if the operand is false, and false otherwise.
+ fmt.Println(!(buses < 3 && buses < 9)) 
+}

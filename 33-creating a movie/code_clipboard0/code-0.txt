@@ -1,0 +1,9 @@
+curl -s --location --request POST 'https://ed-4793220156096512.educative.run/movies/createmovie' \
+--header "token: $token1" \
+ --data-raw '{
+	"Name":"{{movieName}}",
+	"Topic":"{{topic}}",
+	"genre_id":{{genre_id}},
+	"Movie_URL":"{{movie_url}}",
+	"movie_id":{{movie_id}}
+ }'

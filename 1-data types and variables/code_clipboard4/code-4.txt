@@ -1,0 +1,16 @@
+package main
+import "fmt"
+func main() {
+  var house string
+  var nine int
+  var on  bool
+
+  fmt.Println("The value of house is ", house) 
+  fmt.Println("The value of nine is ",nine) 
+  fmt.Println("The value of nine is ", on) 
+
+  var myChange float32
+  myChange = 35.7
+  fmt.Println("My change was ",myChange, "cents")
+ 
+}

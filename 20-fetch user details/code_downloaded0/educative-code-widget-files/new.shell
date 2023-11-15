@@ -1,0 +1,48 @@
+#!/bin/bash
+clear
+mongod > /dev/null 2>&1 &
+sleep 5
+go run main.go  > /dev/null 2>&1 &
+printf "Server starting...\n"
+
+curl -s --location --request GET 'https://ed-4793220156096512.educative.run/users/user_id' \
+--header 'token: ' \
+--data-raw '' &> log.txt
+
+while :
+do
+   if grep "Your app refused to connect." < log.txt > waste.txt; then
+      i=1
+    curl --location --request GET 'https://ed-4793220156096512.educative.run/users/user_id' \
+--header 'token: ' \
+--data-raw '' &> log.txt
+   else
+   break
+   fi
+
+done
+
+value=$(curl -s --location --request POST 'https://ed-4793220156096512.educative.run/users/login' \
+ --data-raw '{
+ "Email":"{{Email}}", 
+ "Password":"{{Password}}"
+ }') &> waste.txt
+
+printf "\nLogin Successfull......\n"
+
+printf "\nNow passing fresh token and id of the user to fetch the details......\n"
+
+token=$(echo "$value" | jq -r '.token')
+id=$(echo "$value" | jq -r '.user_id')
+
+token1=$(echo "$token" | sed -e 's/^"//' -e 's/"$//')
+id1=$(echo "$id" | sed -e 's/^"//' -e 's/"$//')
+printf "\nSending Request\n"
+
+printf "curl -s --location --request GET https://ed-4793220156096512.educative.run/users/${id1} \
+--header token: $token1 \
+--data-raw '' \n\n\n"
+
+curl -s --location --request GET "https://ed-4793220156096512.educative.run/users/${id1}" \
+--header "token: $token1" \
+--data-raw '' | jq

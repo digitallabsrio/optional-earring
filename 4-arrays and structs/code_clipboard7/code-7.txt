@@ -1,0 +1,14 @@
+package main
+import ("fmt")
+
+func main() {
+  sliceD := []int{}
+  fmt.Println(len(sliceD))
+  fmt.Println(cap(sliceD))
+  fmt.Println(sliceD)
+
+  sliceF := []string{"I", "we", "us", "them"}
+  fmt.Println(len(sliceF))
+  fmt.Println(cap(sliceF))
+  fmt.Println(sliceF)
+}

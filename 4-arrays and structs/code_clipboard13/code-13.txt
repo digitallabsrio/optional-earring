@@ -1,0 +1,42 @@
+package main
+
+import "fmt"
+
+type Milestones struct {
+	Amount float64
+  EndDate string
+}
+
+type Transaction struct {
+	Sender, Receiver, Title  string
+	Objectives              []Milestones
+}
+
+func main() {
+	trans := Transaction{
+		Sender: "Alice",
+		Receiver:  "Dayo",
+		Title:     "Building a crypto application",
+		Objectives: []Milestones{
+			Milestones{
+				Amount: 7420.00,
+        EndDate:  "2022-05-24",
+			},
+		Milestones{
+				Amount: 3580.00,
+        EndDate:  "2022-05-24",
+			},
+		Milestones{
+				Amount: 9160.00,
+        EndDate:  "2022-05-24",
+			},
+		},
+	}
+	fmt.Println("Sender: ", trans.Receiver)
+  fmt.Println("Receiver: ", trans.Receiver)
+	fmt.Println("Title: ", trans.Title)
+	fmt.Println("Milestone Amount: ",trans.Objectives[0])
+  fmt.Println(trans.Objectives[0])
+	fmt.Println(trans.Objectives[1])
+	fmt.Println(trans.Objectives[2])
+}

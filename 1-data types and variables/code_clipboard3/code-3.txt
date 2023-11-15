@@ -1,0 +1,15 @@
+package main
+import (
+"fmt";
+"reflect";
+)
+
+func main() {
+  var club string = "The Foodies Club" 
+  crew := 7 
+
+
+  fmt.Println("The name of our club is:",club)
+  fmt.Println("The are ",crew, " people on this ship",)
+  fmt.Println("The data type of crew is = ", reflect.TypeOf(crew))
+}

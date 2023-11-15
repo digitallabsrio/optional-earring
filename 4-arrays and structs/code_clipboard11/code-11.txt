@@ -1,0 +1,25 @@
+package main
+import ("fmt")
+
+func main() {
+  spanishClubs := [3]string{"Real Madrid", "Barcelona", "Sevilla"}
+  fmt.Println("the indexes and values")
+  for pos, val := range spanishClubs {
+     fmt.Printf("%v\t%v\n", pos, val)
+  }
+  
+  fmt.Println("the indexes only")
+  for pos, _ := range spanishClubs {
+     fmt.Printf("%v\n", pos)
+  }
+  
+  fmt.Println("the values only")
+  for _, val := range spanishClubs {
+     fmt.Printf("%v\n", val)
+  }
+  
+  for range "Hey" {
+		fmt.Println("Hey")
+
+	}
+}

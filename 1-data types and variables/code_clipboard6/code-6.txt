@@ -1,0 +1,19 @@
+package main
+import ("fmt")
+
+const STATE string = "Lagos"
+const WEATHER = 23.7
+const (
+  ONE = 1
+  THREE = 3
+  SEVEN = 7
+)
+
+func main() {
+  fmt.Println(STATE)
+  fmt.Println(WEATHER)
+  fmt.Println(ONE)
+  fmt.Println(THREE)
+  fmt.Println(SEVEN)
+
+}

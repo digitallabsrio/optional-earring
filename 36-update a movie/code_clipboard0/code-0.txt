@@ -1,0 +1,7 @@
+curl -s --location --request PUT 'https://ed-4793220156096512.educative.run/movies/{{movie_id}}' \
+--header "token: $token1" \
+--data-raw '{
+	"Name":"{{movieNewName}}",
+	"Topic":"{{topic}}",
+	"Movie_URL":"{{movie_url}}"
+ }' 

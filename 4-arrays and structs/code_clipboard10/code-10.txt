@@ -1,0 +1,50 @@
+package main
+ 
+import "fmt"
+func main() {
+ 
+	var students = map[string]int{}
+	fmt.Println(students)        
+	fmt.Printf("%T\n", students) 
+  
+  var music = map[string]string{"Song": "Kevin's Heart","Artist": "Jcole","Album": "KOD"}
+  fmt.Printf("Music:\t%v\n", music)
+ 
+  var cities = make(map[string]string)
+  cities["Country"] = "Nigeria"
+  cities["State"] = "Lagos"
+  cities["Capital"] = "Ikeja"
+  fmt.Printf("Cities:\t%v\n", cities)
+  
+  fmt.Println(len(cities))
+  
+  fmt.Printf(cities["State"])
+  
+  cities["State"] = "Abuja"
+  cities["Capital"] = "FCT"
+  fmt.Printf("Cities:\t%v\n", cities)
+  
+  cities["Tourist Attraction"] = "Aso Rock"
+  fmt.Printf("Cities:\t%v\n", cities)
+  
+  delete(cities,"Capital")
+  fmt.Printf("Cities:\t%v\n", cities)
+ 
+  value1, key1 := cities["Country"]
+ 
+  _, key9 := cities["State"]
+  fmt.Println(value1, key1)
+  fmt.Println(key9)
+  
+      for key, element := range cities {
+        fmt.Println("Key:", key, "=>", "Value:", element)
+    }
+ 
+ 
+  a := map[string]int{"one": 1, "two": 2, "three": 3}
+	b := map[string]int{"four": 4, "five": 5, "six": 6, "seven": 7}
+	for k, v := range b {
+		a[k] = v
+	}
+	fmt.Println(a)
+}

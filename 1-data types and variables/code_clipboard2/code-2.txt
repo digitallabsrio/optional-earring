@@ -1,0 +1,15 @@
+package main
+import ("fmt")
+func main() {
+  var favourite bool = true     
+  var number int = 7         
+  var pi float32 = 3.14  
+  var firstName string = "Greg"  
+  var specialNumber = complex(9, 15)
+
+  fmt.Println("A dog is an animal", favourite)
+  fmt.Println("My favourite number is the number: ", number)
+  fmt.Println("The value of Pi in two decimal places is: ", pi)
+  fmt.Println("My name is: ", firstName)
+  fmt.Println("An example of a complex number is: ", specialNumber)
+}

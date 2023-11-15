@@ -1,0 +1,15 @@
+package main
+import ("fmt")
+
+func main() {
+  bicycles:= 9
+  tricycles:= 3
+  Username := "Greghu"
+  if bicycles > tricycles {
+    fmt.Println("We have more bicycles than tricycles")
+  }
+  if Username == "Lizzy" {
+    fmt.Println("Elizabeth's username is Lizzy")
+  }
+  // This condition will not print out a result, because it is not true.
+}

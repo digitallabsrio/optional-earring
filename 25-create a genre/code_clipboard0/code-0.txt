@@ -1,0 +1,6 @@
+curl -s --location --request POST "https://ed-4793220156096512.educative.run/genres/creategenre" \
+--header "token: $token1" \
+ --data-raw '{
+ "Name":"{{genreName}}",
+ "genre_id":{{genre_id}}
+ }' 
